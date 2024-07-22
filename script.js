@@ -1,16 +1,6 @@
-//   window.addEventListener('scroll', function() {
-//       var scrollPosition = window.scrollY;
-//       var innerCircle = document.getElementById("inner-circle")
-//       var outercircle = document.getElementById('outer-circle');
-//       var entry = document.getElementById('container');
-//       // Move the circle to the left
-//       // innerCircle.style.right = scrollPosition / 5 + 'px'; // Adjust the divisor to control the speed
-//       // innerCircle.style.top = scrollPosition/2  + 'px'; // Adjust the divisor to control the speed
-//       entry.style.top = scrollPosition  + 'px'; // Adjust the divisor to control the speed
-//   });
+
 console.log(gsap);
-gsap.from('.outer-circle', {duration: 1, y: '-100%' , ease:'bounce'});
-// gsap.to(".outer-circle" ,{duration:3,delay:1 , x:-500})
+gsap.from('.outer-circle', {duration: 1.5, y: '-200%' , ease:'bounce' ,delay:0.5});
 gsap.registerPlugin(ScrollTrigger)
 
 gsap.to(".content", {
@@ -22,8 +12,24 @@ gsap.to(".content", {
     },
     opacity:1,
     ease:"none",
-    duration: 3
+    duration: 3,
     })
+
+      gsap.utils.toArray('.education-entry').forEach(entry => {
+        gsap.fromTo(entry, {
+          x: 1000,
+        }, {
+          x: 0,
+          opacity: 1,
+          duration: 2,
+          scrollTrigger: {
+            trigger: entry,
+            start: "top 90%",
+            end: "top 20%",
+            scrub: true
+          }
+        });
+      });
     function changeBackgroundAndContent(imageUrl, title, content) {
         const container = document.querySelector('#projects');
         container.style.background = ` url(images/${imageUrl}) no-repeat center center`;
@@ -34,7 +40,6 @@ gsap.to(".content", {
       }
       function showContent(element) {
         element.style.width = "70vw"
-      // Create content div if it does not exist
       if (!element.querySelector('.content')) {
         const contentDiv = document.createElement('div');
         contentDiv.classList.add('content');

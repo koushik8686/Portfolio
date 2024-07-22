@@ -250,6 +250,7 @@ background-size: cover;
   display: flex;
   border-radius: 20px 20px;
  width: 60%;
+ right: 1000px;
  margin-bottom: 20px;
 }
 .education-entry p {
@@ -350,7 +351,7 @@ transform: translateY(10px);
 transition: 100ms;
 }
 .show{
-  animation: show 1s 1 ;
+  animation: show 1s 1 ease-in ;
 }/* Contact Page Styles */
 #contact{
   background-image: url(images/Mass\ Circles.svg);
@@ -401,7 +402,8 @@ transition: 100ms;
   text-decoration: none;
   font-size: 1.5rem;
   padding: 10px;
-  color: #3f5efb;
+  color: white;
+  background-color: rgb(6, 63, 128);
   border-radius: 10px;
   transition: color 0.3s ease;
 }
