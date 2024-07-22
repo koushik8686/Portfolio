@@ -17,7 +17,7 @@ gsap.to(".content", {
 
       gsap.utils.toArray('.education-entry').forEach(entry => {
         gsap.fromTo(entry, {
-          x: 1000,
+          x: '100vw',
         }, {
           x: 0,
           opacity: 1,

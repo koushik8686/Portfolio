@@ -244,13 +244,13 @@ background-size: cover;
   padding: 10px;
   padding-top: 30px;
   background-size: cover;
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 .education-entry{
   background-color: white ;
   display: flex;
   border-radius: 20px 20px;
  width: 60%;
- right: 1000px;
  margin-bottom: 20px;
 }
 .education-entry p {
