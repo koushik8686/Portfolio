@@ -164,26 +164,19 @@ body {
   box-shadow: 4px 4px black;
   
  }
- .programming{
-  background: 
-  linear-gradient(to right, rgb(255, 255, 255) 30%, rgba(0, 0, 0, 0) 100%),
-  url('images/programming.jpg') no-repeat center center;
-background-size: cover;
- }
- .web{
-  background: 
-  linear-gradient(to right, rgb(27, 26, 26) 30%, rgba(0, 0, 0, 0) 100%),
-  url('images/web.jpg') no-repeat center center;
-background-size: contain;
-color: white;
- }
+ .programming {
+  background: linear-gradient(to right, #f0f0f0 30%, #b2ebf2 70%);
+}
 
- .ml{
-  background: 
-  linear-gradient(to right, rgb(255, 255, 255) 30%, rgba(0, 0, 0, 0) 100%),
-  url('images/ml.jpeg') no-repeat center center;
-background-size: cover;
- }
+.web {
+  background: linear-gradient(to right, #393e46 30%, #222831 70%);
+  color: white;
+}
+
+.ml {
+  background: linear-gradient(to right, #e0f7fa 30%, #b2ebf2 70%);
+}
+
  .skill img{
   height: 50px;
   width: 50px;
