@@ -402,8 +402,7 @@ transition: 100ms;
 }
 
 .contact-links a:hover {
-  filter: drop-shadow(0 0 0.75rem crimson);
-  color: #ff4655;
+  filter: drop-shadow(0 0 0.75rem rgb(70, 70, 70));
 }
 
 /* Responsive Styles for Contact Page */
